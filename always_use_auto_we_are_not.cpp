@@ -26,7 +26,7 @@ void f(T b, T e)
     std::function<bool(int,int)> isleess = [](int a, int b) -> bool
     {
             return a < b;
-    }
+    };
 
     std::vector<int> v; // какие тут проблемы?
     unsigned sz = v.size(); // size возращает size_t.Проблема в том.Что unsigned и size_t в 32 битной разрядной системе имеет один и тот же размер.Но в 64 разрядной системе unsigned = 32 бит.А size_t = 64 бит.Поэтому тут нужно писать AUTO.
